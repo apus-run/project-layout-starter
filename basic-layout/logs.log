@@ -1,0 +1,1 @@
+2023-11-12T10:31:37.744+0800	[34mINFO[0m	/Users/moocss/work/GoProjects/project-layout-starter/basic-layout/pkg/logger/log.go:151	server listen at 0.0.0.0:8080	{"args": ["0.0.0.0:8080"]}

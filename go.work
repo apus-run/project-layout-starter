@@ -1,0 +1,8 @@
+go 1.20
+
+use (
+    ./basic-layout
+	./multiple-layout
+	./gaea-layout
+	./gaia-layout
+)

@@ -1,0 +1,31 @@
+### 心跳检测
+GET http://localhost:8080/ping
+Content-Type: application/json
+
+
+### 用户登录
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "moocss@126.com",
+    "password": "123456"
+}
+
+### 用户注册
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "name": "moocss",
+  "email": "moocss@126.com",
+  "password": "123456",
+  "confirmPassword": "123456",
+  "phone": "13800138004"
+}
+
+### 查看用户详情
+GET http://localhost:8080/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQxOTAwOTAsIlVzZXJJRCI6OSwiVXNlckFnZW50IjoiQXBhY2hlLUh0dHBDbGllbnQvNC41LjEzIChKYXZhLzE3LjAuNikifQ.2LCjn0tSw8tg5_pdn5yZTfKy7LMyyODL435IkmM0Evc
+
+

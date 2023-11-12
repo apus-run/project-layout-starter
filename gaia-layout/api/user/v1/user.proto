@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "gaia-layout/api/user/v1;v1";
+
+// The user service definition.
+service User {
+  rpc Login(LoginRequest) returns (UserReply) {
+    option (google.api.http) = {
+      post : "/api/users/login",
+      body : "*",
+    };
+  }
+
+  rpc Register(RegisterRequest) returns (UserReply) {
+    option (google.api.http) = {
+      post : "/api/user",
+      body : "*",
+    };
+  }
+
+  rpc UpdateUser(UpdateUserRequest) returns (UserReply) {
+    option (google.api.http) = {
+      put : "/api/user",
+      body : "*",
+    };
+  }
+
+  rpc GetUser(GetUserRequest) returns (UserReply) {
+    option (google.api.http) = {
+      get : "/api/user/{id}",
+    };
+  }
+}
+
+// The request message containing the user's name.
+message LoginRequest {
+  message User {
+    string email = 2;
+    string password = 3;
+  }
+  User user = 1;
+}
+
+message RegisterRequest {
+  message User {
+    string name = 1;
+    string email = 2;
+    string password = 3;
+  }
+  User user = 1;
+}
+
+message GetUserRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message UpdateUserRequest {
+  message User {
+    string email = 1;
+    string password = 2;
+    string name = 3;
+  }
+  User user = 1;
+}
+
+// The response message containing the greetings
+message UserReply {
+  message User {
+    uint64 id = 1;
+    string email = 2;
+    string name = 3;
+  }
+  User user = 1;
+}
