@@ -16,7 +16,9 @@ require (
 	github.com/redis/go-redis/v9 v9.3.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.17.0
+	github.com/stretchr/testify v1.8.4
 	go.uber.org/automaxprocs v1.5.3
+	go.uber.org/mock v0.3.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gorm.io/driver/mysql v1.5.2
 )
@@ -67,7 +69,6 @@ require (
 	github.com/sourcegraph/conc v0.3.0 // indirect
 	github.com/spf13/afero v1.10.0 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
-	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect

@@ -8,6 +8,7 @@ import (
 	"basic-layout/pkg/logger"
 )
 
+//go:generate mockgen -source=./user.go -package=repomocks -destination=mocks/user.mock.go UserRepository
 type UserRepository interface {
 	FindByID(ctx context.Context, id uint64) (*entity.User, error)
 }

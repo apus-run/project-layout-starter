@@ -8,6 +8,7 @@ import (
 	"basic-layout/pkg/logger"
 )
 
+//go:generate mockgen -source=./user.go -package=svcmocks -destination=mocks/user.mock.go UserService
 type UserService interface {
 	GetByID(ctx context.Context, id uint64) (*entity.User, error)
 }

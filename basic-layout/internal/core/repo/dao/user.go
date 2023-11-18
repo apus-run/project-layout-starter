@@ -12,6 +12,8 @@ import (
 var ErrDataNotFound = gorm.ErrRecordNotFound
 
 // UserDAO ... 数据访问层相关接口定义, 使用 DB 风格的命名
+//
+//go:generate mockgen -source=./user.go -package=daomocks -destination=mocks/user.mock.go UserDAO
 type UserDAO interface {
 	FindByID(ctx context.Context, id uint64) (*model.User, error)
 }

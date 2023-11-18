@@ -20,3 +20,5 @@ vendor/
 vendor
 /Godeps/
 /scripts/docker/mysql/data
+go.work
+go.work.sum
